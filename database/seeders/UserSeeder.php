@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
+        // Create admin and assign role
         $admin = User::create([
             'name' => 'SimonARG',
             'email' => 'simonchasnovsky@gmail.com',
@@ -22,6 +23,7 @@ class UserSeeder extends Seeder
         ]);
         $admin->assignRole('admin');
 
+        // Create mod and assign role
         $mod = User::create([
             'name' => 'Pachorra',
             'email' => 'pachorra@gmail.com',
